@@ -7,12 +7,13 @@ const allProjects = await getCollection("projects");
 ---
 
 <Layout>
-  {
-    allProjects.map((project) => (
-      <div class="project-card">
-        <h2>{project.data.title}</h2>
-        <p>{project.data.description}</p>
-      </div>
-    ))
-  }
+  <ul>
+    {
+      allProjects.map((project) => (
+        <li>
+          <a href={`projekte/${project.data.slug}`}>{project.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>

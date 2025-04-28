@@ -11,6 +11,7 @@ const projects = defineCollection({
     description: z.string(),
     githubRepositoryLink: z.string(),
     technologies: z.array(z.string()),
+    slug: z.string(),
   }),
 });
 

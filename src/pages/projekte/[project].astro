@@ -1,0 +1,19 @@
+---
+import { getCollection, render } from "astro:content";
+
+// Generate a new page for each project in the collection
+export async function getStaticPaths() {
+  const allProjects = await getCollection("projects");
+  return allProjects.map((project) => ({
+    params: { project: project.data.slug },
+    props: { project },
+  }));
+}
+
+// Get the project for the template
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<h1>{project.data.title}</h1>
+<Content />
