@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "aaron-bond.better-comments",
+    "usernamehw.errorlens",
+    "streetsidesoftware.code-spell-checker-german",
+    "esbenp.prettier-vscode"
+  ],
+  "unwantedRecommendations": []
+}
